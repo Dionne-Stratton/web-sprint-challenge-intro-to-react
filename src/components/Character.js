@@ -1,13 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 
+const NameStyle = styled.h1`
+  font-size: 2 rem;
+  color: #023e8a;
+`
+
+const CardStyle = styled.div`
+  width: 500px;
+  background-color: lightblue;
+  display: inline-block;
+  margin: 10%;
+`
+
+const InfoStyle = styled.div`
+  color: #194c9e;
+`
+
 const Character = (props) => {
     return(
-        <div className = "starwars-characters">
-            <div>
-            <h1>{props.name}</h1>
-            </div>
-            <div className = "characters-info">
+        <CardStyle className = "starwars-characters">
+            <NameStyle>{props.name}</NameStyle>
+            <InfoStyle className = "characters-info">
                 <p>Birth Year: {props.birthYear}</p>
                 <p>Gender: {props.gender}</p>
                 <p>Hair Color: {props.hairColor}</p>
@@ -15,8 +29,8 @@ const Character = (props) => {
                 <p>Eye Color: {props.eyeColor}</p>
                 <p>Height: {props.height}</p>
                 <p>Mass: {props.mass}</p>
-            </div>
-        </div>
+            </InfoStyle>
+        </CardStyle>
     )
 }
 
